@@ -9,12 +9,11 @@ body{
 }
 
 .class-header{
-
-    position: absolute;
-    top:0;
-
-
+border:1px dotted black;
+padding:10px 20px 0px 40px;/*padding is the space between the border and the text*/
+/*--top left bottom right*/
 color: green;
+margin:40px /*space out of the border*/
 }
 
 h2{
@@ -25,12 +24,24 @@ p{
     font-size:2rem;
     color:red;
     border: 1px solid black;
-    pading
+    padding-top :50px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 #id-header{
 
     color:yellow;
+}
+button{
+    padding:40px;
+    display:  block;
+}
+div{
+    display:flex;
+    justify-content:space-between ;/*horizontally*/
+
 }
     </style>
     </head>
@@ -42,6 +53,12 @@ p{
 <h2 class="class-header">class styled header</h2>
 
 <h2 id= "id-header">ID styled header</h2>
+
+<div>
+   <button>1</button>
+   <button>2</button>
+   <button>3</button>
+</div>
 
     </body>
 </html>
