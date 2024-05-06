@@ -14,27 +14,35 @@
      
 }
 
-.header .logo{
 
+.header .logo {
+    display: flex;
+flex-direction: column;
+gap: 0;
     opacity:0.7;
     padding-left:150px;
    
     
 }
 
-.header .logo inst{
+.header .logo h4 {
+    align-item: flex-end;
+    margin-top: -17px;
+    }
+
+.header .logo h4 span{
     color:orangered;
     font-size: 10px;
     padding-left: 27px;
    padding-top:0px;
 }
 
-.header .navigation {
+.header .navigation nav {
 
     margin-right: 100px;
 }
 
-.header .navigation select{
+.header .navigation nav select{
 
     margin-left: 10px;
     padding: 5px 10px;
@@ -43,14 +51,14 @@
     font-weight: bold;
 }
 
-.header .navigation a{
+.header .navigation nav a{
 
     text-decoration: none;
     margin-left: 10px;
     color:rgba(6, 6, 6, 0.4)
 
 }
-.header .navigation button{
+.header .navigation nav button{
 
     color:white;
     padding: 8px 25px;
@@ -75,12 +83,12 @@
     padding-top:70px;
 }
 
-.main{
+.photo-details{
     display: flex;
     justify-content: space-around;
 }
 
-.main .details .para{
+.photo-details .details .para{
     width:600px;
     margin-bottom:10px ;
     margin-left: 100px;
@@ -88,61 +96,41 @@
 
 }
 
-.main .details .choice{
-
+.button-item {
     display: flex;
-    width:600px;
+    flex-gap: 10px;
+    }
+    
+    .button-item button {
+    
+        background-color: rgb(11, 164, 195);
+        color:white;
+        padding: 5px 15px;
+        border:none;
+        border-radius: 5px ;
+        margin-left: 100px;
+        text-align:center;
+        margin-bottom: 8px;
+    
+    }
+    
+    
+     .button-item.red button {
+    background-color: orangered;
+    PADDING:10px 20px;
+    }
+    
+    
+    .button-item p {
+        font-size: 15px;
    
-   
+        margin-left: 10px;
+    
+    
+    }
+    
 
-}
-
-.main .details .choice #button1{
-
-    background-color: rgb(11, 164, 195);
-    color:white;
-    padding: 5px 15px;
-    border:none;
-    border-radius: 5px ;
-    margin-left: 100px;
-    text-align:center;
-    margin-bottom: 8px;
-
-}
-
-.main .details .choice  #button2{
-
-    background-color: rgb(11, 164, 195);
-    color:white;
-    padding: 5px 15px;
-    border:none;
-    border-radius: 5px ;
-    margin-left: 100px;
-    text-align:center;
-    margin-bottom: 8px;
-
-}
-
-.main .details .choice #button3{
-
-    background-color:orangered;
-    color:white;
-    padding: 10px 19px;
-    border:none;
-    border-radius: 5px ;
-    margin-left: 100px;
-    text-align:center;
-
-}
-
-.main .details .choice .text{
-
-    font-size: 10px;
-    margin-bottom: 8px ;
-    margin-left: 10px;
-}
-
-.main .photo{
+.photo-details .photo{
 
     margin:100px;
     
@@ -159,4 +147,16 @@
 .footer p{
 
     opacity: 0.7;
+}
+
+.footer .F-logos{
+
+    display:flex;
+}
+
+.footer .F-logos .logos img{
+
+    width:50px;
+    height:50px;
+   
 }
