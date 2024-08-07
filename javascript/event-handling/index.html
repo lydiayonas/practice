@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+</head>
+<body>
+    <p id="myParagraph">This is a mouse out event</p>
+    <h1>This is a hover event</h1>
+    <button id="myButton">Click me</button>
+ 
+    <script>
+        // Event listener for button click
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Button Clicked!');
+        });
+
+      /*  document.getElementById('myParagraph').addEventListener('mouseout',function(){
+            alert('paragraph mouseout ')
+        })*/
+         
+        document.querySelector("h1").addEventListener('mouseover',function(){
+            document.querySelector("h1").style.color ='blue'
+        })
+
+        document.querySelector("h1").addEventListener('mouseout',function(){
+            document.querySelector("h1").style.color='black'
+        })
+       
+    </script>
+</body>
+</html>
