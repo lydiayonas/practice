@@ -17,6 +17,7 @@ void insert_middle();
 void delete_beg();
 void delete_end();
 void delete_middle();
+void display();
 
 int main() {
     int choice;
@@ -28,7 +29,8 @@ int main() {
         cout << "4. Delete at Beginning\n";
         cout << "5. Delete at End\n";
         cout << "6. Delete at Middle\n";
-        cout << "7. Exit\n";
+        cout << "7. Display List\n";
+        cout << "8. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -39,7 +41,8 @@ int main() {
             case 4: delete_beg(); break;
             case 5: delete_end(); break;
             case 6: delete_middle(); break;
-            case 7: cout << "Exiting the program.\n"; return 0;
+            case 7: display(); break;
+            case 8: cout << "Exiting the program.\n"; return 0;
             default: cout << "Invalid choice. Please try again.\n";
         }
     }
@@ -203,4 +206,19 @@ void delete_middle() {
         delete temp; // Free memory
         cout << "Node deleted successfully at position " << position << ".\n";
     }
+}
+
+void display() {
+    if (start == NULL) {
+        cout << "List is empty.\n";
+        return;
+    }
+
+    node* temp = start; // Start from the first node
+    cout << "Doubly Linked List: ";
+    while (temp != NULL) {
+        cout << temp->data << " "; // Print data of each node
+        temp = temp->next;        // Move to the next node
+    }
+    cout << "\n";
 }
